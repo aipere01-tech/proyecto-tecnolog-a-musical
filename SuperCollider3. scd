@@ -1,0 +1,11 @@
+(
+// SuperCollider - síntesis sonora básica
+
+SynthDef(\tone, {
+    var sig;
+    sig = SinOsc.ar(440, 0, 0.1);
+    Out.ar(0, sig ! 2);
+}).add;
+
+// Nota: sistema preparado para recibir control OSC desde Pure Data
+)
